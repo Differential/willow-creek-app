@@ -1,2 +1,1 @@
-/* Export your custom icon components here. */
-export {};
+export { default as BrandIcon } from './BrandIcon';
