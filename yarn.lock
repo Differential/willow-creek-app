@@ -71,10 +71,10 @@
     formik "1.5.1"
     yup "^0.27.0"
 
-"@apollosproject/ui-connected@^2.43.0":
-  version "2.43.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-2.43.0.tgz#68a032fa9ac9a8becd2748f75de12c6950a9ba7f"
-  integrity sha512-7363EXG/GQCdqVexjCeL9Tcii8CY2QdqGwiZK8CfOIfK1dFMgHjN3zTH/Xtb9AYDempncZ/pbHhZGlbeFdZO6w==
+"@apollosproject/ui-connected@^2.43.2-canary.5":
+  version "2.43.2-canary.5"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-2.43.2-canary.5.tgz#4b48d9d153b017ba7633384d6492c6ca7fd83e1c"
+  integrity sha512-dlL+co6rg5yZ4ojaD+Ad/p/Hr8I7lptZzpNS8nzPweVsyDhc+88FMULpGj18cGZA6vIbPiyIRGJ9569fp0DRAg==
   dependencies:
     "@gorhom/bottom-sheet" "3.4.1"
     apollo-upload-client "^17.0.0"
