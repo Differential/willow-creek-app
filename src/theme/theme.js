@@ -1,3 +1,4 @@
+import { Appearance } from 'react-native';
 /* Add your custom theme definitions below. Anything that is supported in UI-Kit Theme can be
  overridden and/or customized here! */
 
@@ -52,6 +53,13 @@ const colors = {
  * }
  * ```
  */
-// const overrides = {};
+const overrides = {
+  'ui-onboarding.Landing': {
+    textColor:
+      Appearance.getColorScheme() === 'dark'
+        ? colors.secondary
+        : colors.primary,
+  },
+};
 
-export default { colors };
+export default { colors, overrides };
