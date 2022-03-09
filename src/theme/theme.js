@@ -53,12 +53,17 @@ const colors = {
  * }
  * ```
  */
+
+const darkMode = Appearance.getColorScheme() === 'dark';
 const overrides = {
   'ui-onboarding.Landing': {
-    textColor:
-      Appearance.getColorScheme() === 'dark'
-        ? colors.secondary
-        : colors.primary,
+    textColor: darkMode ? colors.secondary : colors.primary,
+  },
+  'ui-auth.styles.TitleText': {
+    color: darkMode ? colors.secondary : colors.primary,
+  },
+  'ui-onboarding.Slide.SlideContent.Title': {
+    color: darkMode ? colors.secondary : colors.primary,
   },
 };
 
