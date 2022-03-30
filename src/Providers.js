@@ -1,3 +1,7 @@
+import { Amplitude } from '@amplitude/react-native';
+import ApollosConfig from '@apollosproject/config';
+const amplitude = Amplitude.getInstance();
+amplitude.init(ApollosConfig.AMPLITUDE_API_KEY);
 import querystring from 'querystring';
 import PropTypes from 'prop-types';
 import { NavigationService } from '@apollosproject/ui-kit';
@@ -52,7 +56,12 @@ const AppProviders = ({ children }) => (
           })
         }
       >
-        <AnalyticsProvider>
+        <AnalyticsProvider
+          trackFunctions={[
+            ({ eventName, properties }) =>
+              amplitude.logEvent(eventName, properties),
+          ]}
+        >
           <LiveProvider>{children}</LiveProvider>
         </AnalyticsProvider>
       </AuthProvider>

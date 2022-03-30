@@ -1,4 +1,10 @@
 PODS:
+  - Amplitude (8.8.0):
+    - AnalyticsConnector (~> 1.0.0)
+  - amplitude-react-native (2.10.0):
+    - Amplitude (= 8.8.0)
+    - React-Core
+  - AnalyticsConnector (1.0.0)
   - boost (1.76.0)
   - BugsnagReactNative (7.16.2):
     - React-Core
@@ -455,6 +461,7 @@ PODS:
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
+  - "amplitude-react-native (from `../node_modules/@amplitude/react-native`)"
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - "BugsnagReactNative (from `../node_modules/@bugsnag/react-native`)"
   - BVLinearGradient (from `../node_modules/react-native-linear-gradient`)
@@ -547,6 +554,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Amplitude
+    - AnalyticsConnector
     - CocoaAsyncSocket
     - Flipper
     - Flipper-Boost-iOSX
@@ -565,6 +574,8 @@ SPEC REPOS:
     - YogaKit
 
 EXTERNAL SOURCES:
+  amplitude-react-native:
+    :path: "../node_modules/@amplitude/react-native"
   boost:
     :podspec: "../node_modules/react-native/third-party-podspecs/boost.podspec"
   BugsnagReactNative:
@@ -693,6 +704,9 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  Amplitude: 710116f3539c225e86fb70a8abdcd20015683132
+  amplitude-react-native: 0e7ad3adcea6e9e211f6e227d4ee7dd4d83d3f1b
+  AnalyticsConnector: 4c386d5972ac9da86e22d668564dbbac97558754
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   BugsnagReactNative: 8ccbb937bc8001cd3a5ed18ef0691d23cca8a748
   BVLinearGradient: e3aad03778a456d77928f594a649e96995f1c872
