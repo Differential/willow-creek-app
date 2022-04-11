@@ -9,7 +9,7 @@ import { Appearance } from 'react-native';
  * on a per-component basis with "overrides"
  */
 const colors = {
-  primary: '#071A2A',
+  primary: '#4BA6DB',
   secondary: '#4BA6DB',
   tertiary: '#E7B547',
 };
