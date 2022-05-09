@@ -46,7 +46,7 @@
     "@apollosproject/ui-analytics": "^2.43.0",
     "@apollosproject/ui-auth": "^2.43.0",
     "@apollosproject/ui-connected": "^2.44.3",
-    "@apollosproject/ui-fragments": "^2.44.3",
+    "@apollosproject/ui-fragments": "^3.6.1-canary.1",
     "@apollosproject/ui-htmlview": "^2.43.0",
     "@apollosproject/ui-kit": "^2.44.3",
     "@apollosproject/ui-mapview": "^2.43.0",

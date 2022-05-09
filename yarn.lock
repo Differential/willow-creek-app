@@ -87,10 +87,10 @@
     lodash "^4.17.11"
     moment "^2.29.1"
 
-"@apollosproject/ui-fragments@^2.44.3":
-  version "2.44.3"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-fragments/-/ui-fragments-2.44.3.tgz#a1f780f8ac64b15c98abf35d5883b0c071688d26"
-  integrity sha512-dnDDcRIJbSO2OlUPc/+ol21/JlflZI+pq+q+g5FJ8NI4XnpopxWdrHRnJ0MC76bVoNPh4DTr1yU3bXd2e7WM4A==
+"@apollosproject/ui-fragments@^3.6.1-canary.1":
+  version "3.6.1-canary.1"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-fragments/-/ui-fragments-3.6.1-canary.1.tgz#2c7bcbd2230ca378786bee07c71281fca06c36ef"
+  integrity sha512-axaT59v3gPC+2IEbLXFLuNcNBEqs6AGyGr1Lwloby0NAYiYFO0eGOBahl9EJd63nt8lkTg7AEe5xODlLbtHtug==
   dependencies:
     "@apollo/client" "3.3.20"
 
