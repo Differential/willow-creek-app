@@ -1,7 +1,5 @@
 import { Amplitude } from '@amplitude/react-native';
 import ApollosConfig from '@apollosproject/config';
-const amplitude = Amplitude.getInstance();
-amplitude.init(ApollosConfig.AMPLITUDE_API_KEY);
 import querystring from 'querystring';
 import PropTypes from 'prop-types';
 import { NavigationService } from '@apollosproject/ui-kit';
@@ -13,8 +11,36 @@ import {
   ACCEPT_FOLLOW_REQUEST,
 } from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
+import { snakeCase } from 'lodash';
+import OneSignal from 'react-native-onesignal';
 
 import ClientProvider, { client } from './client';
+
+const amplitude = Amplitude.getInstance();
+amplitude.init(ApollosConfig.AMPLITUDE_API_KEY);
+
+const trackOneSignal = ({ eventName, properties }) => {
+  const acceptedEvents = [
+    'PrayerPrayed',
+    'PrayerAdded',
+    'View Content',
+    'Comment Added',
+  ];
+  if (!acceptedEvents.includes(eventName)) {
+    return;
+  }
+
+  const tags = {};
+  const timestamp = Math.floor(Date.now() / 1000);
+
+  tags[snakeCase(`Last Date ${eventName}`)] = timestamp;
+
+  if (eventName === 'View Content') {
+    tags[snakeCase(`Last Date ${properties.parentChannel}`)] = timestamp;
+  }
+
+  OneSignal.sendTags(tags);
+};
 
 const AppProviders = ({ children }) => (
   <ClientProvider>
@@ -60,6 +86,7 @@ const AppProviders = ({ children }) => (
           trackFunctions={[
             ({ eventName, properties }) =>
               amplitude.logEvent(eventName, properties),
+            trackOneSignal,
           ]}
         >
           <LiveProvider>{children}</LiveProvider>
